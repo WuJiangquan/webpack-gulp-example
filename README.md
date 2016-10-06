@@ -10,10 +10,10 @@
   
 ## 使用
     1. watch html文件会在templates/app/temp路径下输出
-      `gulp clean`
-      `gulp watch`
+      gulp clean
+      gulp watch
     2. 打包 html文件会在templates/app/build路径输出
       `gulp clean`
-      `gulp`
+      gulp
      
     
