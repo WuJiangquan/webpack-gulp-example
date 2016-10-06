@@ -1,0 +1,94 @@
+@import "dimen";
+@import "mixin";
+.inputWraper{
+	margin-bottom:10px;
+}
+
+.formList:last-child{
+	border-bottom:0;
+}
+
+.agree{
+	line-height:16px;
+	&:before{
+			content:"";
+			display:block;
+			float:left;
+			width:16px;
+			height:16px;
+			margin-right:5px;
+			border-radius:16px;
+			background:$heightLightColor;
+		}
+	p{
+		font-size:1rem;
+		color:$middleGray;
+	}
+	span{
+		float:left;
+		@include btn;
+		background:transparent;
+		font-size:1rem;
+		display:block;
+		padding:0;
+		
+	}
+}
+
+
+.addressContainer{
+	padding:$pagePadding;
+	height:$addressContainerHeight;
+	address{
+		float:left;
+		color:$middleGray;
+		font-size:$addressFontSize;
+		line-height:$addressContainerHeight;
+		&:before{
+			content:"";
+			float:left;
+			height:$addressContainerHeight;
+			width:12px;
+			margin-right:8px;
+		}
+	}
+	button{
+		@include btn;
+		float:right;
+		height:$addressContainerHeight;
+		width:$addressContainerHeight;
+		border-radius:$addressContainerHeight;
+		border:1px solid $lightGray;
+	}
+}
+
+.addAddressBtn{
+	@include btn;
+	background:transparent;
+	margin-left:$pagePadding;
+	margin-bottom:10px;
+	padding-left:0;
+	color:$heightLightColor;
+	font-size:1rem;
+	display:block;
+}
+
+.formListcontainerPlaceholder{
+	height:50px;
+	width:100%;
+}
+
+
+
+.storeIamgesContainer{
+	h5{
+		padding:$pagePadding;
+		color:$middleGray;
+	}
+	.formList{
+		background:white;
+	}
+	.storeImageListContainer{
+		margin-top:0;
+	}
+}

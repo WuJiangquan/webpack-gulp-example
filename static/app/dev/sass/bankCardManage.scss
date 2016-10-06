@@ -1,0 +1,88 @@
+@import "dimen";
+@import "mixin";
+
+.selectBank{
+	@include baselistContainer;
+	position:fixed;
+	bottom:55px;
+	background:white;
+}
+
+.selectBank .bankList{
+	@include list;
+	text-align:center;
+}
+
+.bankListWraper{
+	width:100%;
+	@include boxSizing;
+	padding:$pagePadding;
+}
+
+.bankListWraper .bankList{
+	width:100%;
+	height:auto;
+	@include boxSizing;
+	padding:$bankListPadding;
+	border-radius:$baseBorderRadius;
+	background:$heightLightColor;
+	color:white;
+	font-size:1.286rem;
+	line-height:1.286rem;
+}
+
+
+.bankListWraper .bankType {
+	margin-bottom:24px;
+	line-height:32px;
+	.logo{
+		height:32px;
+		width:32px;
+		margin-right:$bankListPadding;
+		float:left;
+	}
+}
+.bankListWraper .bankId{
+	text-align:right;
+	height:18px;
+	width:100%;
+	span{
+		float:right;
+		&:after{
+			content:"**** **** **** ****";
+			float:left;
+			margin-top:4px;
+			margin-right:6px;
+		}
+	}
+}
+
+.operatorTip{
+	padding:30px 15px 10px 15px;
+	line-height:1.285rem;
+	font-size:$operatorTip;
+	color:$middleGray;
+}
+
+.myCard{
+	.formList{
+		padding-left:60px;
+	}
+}
+
+.myCardType {
+	background:transparent;
+	.formList{
+		background:white;
+		padding-left:75px;
+		border-bottom:0;
+		margin-bottom:10px;
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+
+.formListcontainer{
+	margin-top:0;
+}

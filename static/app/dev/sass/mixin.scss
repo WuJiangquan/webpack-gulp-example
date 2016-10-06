@@ -1,0 +1,195 @@
+@import "dimen.scss";
+
+
+@mixin arrowIcon{
+	width:10px;
+	height:16px;
+	background-image:url(../images/arrow.png);
+	background-size:100% 100%;
+	display:inline-block;
+}
+
+@mixin btn{
+	background:white;
+	color:$lightGray;
+	text-align:center;
+	border-radius:$baseBorderRadius;
+	outline:none;
+	border:0;
+	@include unSelectText;
+}
+
+
+@mixin longBtn{
+	width:100%;
+	height:45px;
+	line-height:45px;
+	font-size:$longBtnFontSize;
+	@include  btn;
+}
+
+@mixin activeBtn {
+	background : $heightLightColor !important;
+	color:white !important;
+}
+
+@mixin mask{
+	position:absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	width:100%;
+	height:100%;
+}
+
+@baseLabel{
+	padding:16px 0;
+	font-size:1rem;
+	line-height:1rem;
+	color:$middleGray;
+}
+
+@mixin input{
+	padding:16px 20px;
+	font-size:1rem;
+	border-radius:$baseBorderRadius;
+	line-height:1rem;
+	border:0;
+	outline:none;
+	@include boxSizing;
+	color:$deepGray;
+	&::-webkit-input-placeholder{
+		color:$lightGray;
+	}
+}
+
+@mixin baselistContainer{
+	width:100%;
+	height:auto;
+	background:white;
+
+}
+
+@mixin list{
+	position:relative;
+	width:100%;
+	@include boxSizing();
+	padding:$listPaddingVertical;
+	background:white;
+	border-bottom:$segmentationBorder;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+@mixin boxSizing($sizing:border-box){
+	box-sizing:$sizing;
+	-webkit-box-sizing:$sizing;
+	-moz-box-sizing:$sizing;
+	-ms-box-sizing:$sizing;
+	-o-box-sizing:$sizing;
+}
+
+@mixin columnCount($count:3){
+	column-count:$count;
+	-webkit-column-count:$count;
+	-moz-column-count:$count;
+	-ms-column-count:$count;
+	-o-column-count:$count;
+}
+
+@mixin columnGap($gap:0){
+	column-gap:$gap;
+	-webkit-column-gap:$gap;
+	-moz-column-gap:$gap;
+	-ms-column-gap:$gap;
+	-o-column-gap:$gap;
+}
+
+@mixin columnRule(){
+	column-rule:$rule;
+	-webkit-column-rule:$rule;
+	-moz-column-rule:$rule;
+	-ms-column-rule:$rule;
+	-o-column-rule:$rule;
+}
+
+@mixin unSelectText{
+	 -webkit-user-select:none; 
+	 -moz-user-select:none; 
+	 -ms-user-select:none; 
+	 -o-user-select:none;
+	 user-select:none;
+}
+
+@mixin appearance($appearance){
+	appearance: $appearance;
+    -moz-appearance: $appearance;
+    -webkit-appearance: $appearance;
+    -ms-appearance: $appearance;
+    -o-appearance : $appearance;
+}
+
+@mixin boxShadow($shadow){
+	box-shadow:$shadow;
+	-webkit-box-shadow:$shadow;
+	-moz-box-shadow:$shadow;
+	-o-box-shadow:$shadow;
+	-ms-box-shadow:$shadow;
+}
+
+@mixin tableCell(){
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+@mixin tableCellImg(){
+	display:inline-block;
+	max-width:100%;
+	max-height:100%;
+}
+
+@mixin max-screen($width){
+	@media  (max-width : $width){
+		@content;
+	}
+}
+
+@mixin screen($minWidth,$maxWidth){
+	@media (min-width : $minWidth) and (max-width : $maxWidth){
+		@content;
+	}
+}
+
+@mixin min-screen($width){
+	@media (min-width : $width){
+		@content;
+	}
+}
+
+@mixin transform($transform){
+	-webkit-transform:$transform;
+	-moz-transform:$transform;
+	-ms-transform:$transform;
+	-o-transform:$transform;
+	transform:$transform;
+}
+
+@mixin textOverFlow{
+	text-overflow:ellipsis;
+	overflow:hidden;
+	white-space:nowrap; 
+}
+
+@mixin addImagLabelIcon{
+	width:20%;
+	height:20%;
+	background:url('images/addPhotoBackground.png');
+	background-size:100% 100%;
+	margin:0 auto;
+	margin-top:40%;
+	display:inline-block;
+}

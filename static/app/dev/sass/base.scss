@@ -1,0 +1,179 @@
+@import "mixin";
+@import "dimen";
+
+body,ul,p,h1,h2,h3,h4,h5,h6, figure,form {
+	padding:0;
+	margin:0;
+	font-weight:normal;
+}
+
+html{
+	font-size:14px;
+}
+
+@for $i from 1 to 6{
+	h#{$i} {font-size:22-$i*2px}
+}
+
+*{
+ @include appearance(none);
+}
+
+body{
+    width: 100%;
+    background:$themeBgColor;
+    overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+address{
+	font-style:normal;
+}
+  
+.hide {
+  display: none !important; }
+
+.block {
+  display: block !important; }
+  
+.floatLeft{
+	float:left;
+	}
+	
+.floatRight{
+	float:right;
+	}
+li{
+	list-style:none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+
+.longSubmitBtnWraper{
+	height:45px;
+	@include boxSizing;
+	padding: 0 15px; 
+	margin-bottom:10px;
+
+}
+
+.fixedBtn{
+	@include btn;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:45px;
+	line-height:45px;
+	border-radius:0;
+}
+
+.activieBtn{
+	@include activeBtn
+}
+
+.longSubmitBtn{
+	@include longBtn
+}
+.pageTopTip{
+	width:100%;
+	height:$getAddressFailtipHeight;
+	line-height:$getAddressFailtipHeight;
+	font-size:$getAddressFailtipFontSize;
+	color:$heightLightColor;
+	text-align:center;
+	background:white;
+}
+
+.uploadImageList{
+		position:relative;
+		height:66px;
+		padding-top:8px !important;
+		padding-bottom:8px !important;
+		padding-left:125px !important;
+		.imageType{
+			position:absolute;
+			left:$pagePadding;
+			top:8px;
+			height:$uploadIamgeHeight;
+			line-height:$uploadIamgeHeight;
+			color:$lightGray;
+		}
+		.imagePreview{
+			float:left;
+		}
+		label{
+			float:right;
+			position:static !important;
+		}
+		img{
+			width:$uploadIamgeHeight;
+			height:$uploadIamgeHeight;
+			border:0;
+
+		}
+		input[type=file]{
+			width:0;
+			height:0;
+			opacity:0;
+			float:right;
+			margin-right:-30px;
+			display:block;
+		}
+}
+
+.signUpSucceed{
+	text-align:center;
+	figure{
+		width:100%;
+		height:auto;
+		margin-top:115px;
+		img{
+			height:120px;
+			width:100px;
+			margin:0 auto;
+		}
+	}
+	h2{
+		line-height:75px;
+		color:$middleGray;
+	}
+	a{
+		color:$heightLightColor;
+	}
+
+}
+
+.addAddressListContainer{
+	background:white;
+	margin-top:0;
+	.formList{
+		.selectResult{
+			@include btn;
+			padding-top:0;
+			padding-bottom:0;
+			background:transparent;
+			color:$lightGray;
+			float:right;
+			&:after{
+				content:"";
+				@include arrowIcon;
+				height:1rem;
+				width:5px;
+				margin-left:14px;
+				float:right;
+			}
+		}
+	}
+	textarea{
+		@include input;
+		width:100%;
+		padding:0;
+		resize: none;
+    	line-height: 18px;
+	}
+}
+

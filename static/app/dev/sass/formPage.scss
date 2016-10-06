@@ -1,0 +1,68 @@
+@import "dimen";
+@import "mixin";
+.signUpInput{
+	@include input;
+	border-radius:$baseBorderRadius;
+}
+
+.originInput{
+	@include input;
+}
+
+.opacityMask{
+	@include mask;
+	background:rgba(0,0,0,0.3);
+}
+
+.formListcontainer{
+	@include baselistContainer;
+}
+
+.formList{
+	@include list;
+	&:last-chid{
+		border-bottom:0;
+	}
+	label{
+		position:absolute;
+		color:$middleGray;
+		left:$formListPadding;
+	}
+	input{
+		@include input;
+		padding:0;
+		width:100%;
+	}
+}
+
+.formListcontainer{
+	background:transparent;
+	margin-top:30px;
+	margin-bottom:50px;
+	.inputWraper{
+		position:relative;
+		width:100%;
+		padding: 0 $listPaddingVertical;
+		&.verifycationList{
+			padding-right:120px;
+		}
+		@include boxSizing;
+		input{
+			@include input;
+			font-size:1rem;
+			padding:$inputSignUpPaddingVertical $inputSignUpPaddingHorizental;
+			width:100%;
+		}
+
+		.verifyCationBtn{
+			position:absolute;
+			right:$listPaddingVertical;
+			bottom:0;
+			font-size:1rem;
+			@include btn;
+			padding:$inputSignUpPaddingVertical $inputSignUpPaddingHorizental;
+			background:white;
+			color:$heightLightColor;
+		}
+	}
+}

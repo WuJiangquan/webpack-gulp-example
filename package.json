@@ -1,0 +1,30 @@
+{
+  "name": "gulpwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wujiangquan",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-copy": "0.0.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rev": "^7.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-usemin": "^0.3.24",
+    "gulp-webpack": "^1.5.0",
+    "html-webpack-plugin": "^2.22.0",
+    "quan-mvc": "^1.0.0",
+    "webpack-dev-server": "^1.16.1"
+  }
+}
